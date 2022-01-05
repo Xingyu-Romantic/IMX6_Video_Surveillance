@@ -72,8 +72,8 @@ class Camera(BaseCamera):
                 im = np.array(im)
                 img_encode = cv2.imencode('.jpg', im)[1]
                 img_byte = img_encode.tobytes()
-                client.send(bytes("Server has recieved messages !", encoding='utf-8'))
                 yield img_byte
+                client.send(bytes("Server has recieved messages !", encoding='utf-8'))
                 # client.send(im_encode)
                 # cv2.imshow("Test", im)
                 # if cv2.waitKey(1) == 27:

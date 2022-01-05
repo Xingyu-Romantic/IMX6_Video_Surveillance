@@ -1,0 +1,27 @@
+{% extends 'bootstrap/base.html' %}  #声明继承
+
+{% block title %}{{ 视频监控系统 }}{% endblock %}
+
+
+
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+  <h1 style="text-align: center;">视频监控系统</h1>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <img style="text-align: center;" src="{{ url_for('video_feed') }}"></img>
+    </div>
+
+    <div class="col-md-6">
+      <h1 style="text-align: center;"> 实时人流量显示 </h1>
+      <img style="text-align: center;" src="{{ url_for('matplot_feed') }}"></img>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
